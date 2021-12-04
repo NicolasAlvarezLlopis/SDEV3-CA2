@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'accounts',
     'shop',
     'cart',
+    'stripe',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +142,6 @@ STATICFILES_FINDERS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = str(BASE_DIR.joinpath('media'))
+
+STRIPE_SECRET_KEY = '<sk_test_51K1q8cAna8hPznOJ0ff39uASi5EZdVcRvutMxkUuy1RXpqE8jUgmikFNed3tFFzZXqftsBrtoz2LjS1SUI0Y7Xwj00eiSJKUP3>'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51K1q8cAna8hPznOJK9DdfkIfGsD3nMHaBEx2IScqnx7byRrE4r0yIeh2n120TEntZcEeErrynRPsxBvUn2ARJZHn00svDRXENI'
