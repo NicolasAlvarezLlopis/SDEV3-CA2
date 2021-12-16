@@ -51,12 +51,12 @@ Cart - Perfect Cushion Store
 					<td class="text-left">
 						{{cart_item.product.name}}
 						<br>
-						Unit Price: £{{cart_item.product.price}}
+						Unit Price: €{{cart_item.product.price}}
 						<br>
-						Qty: {{cart_item.quantity}} x £{{cart_item.product.price}}
+						Qty: {{cart_item.quantity}} x €{{cart_item.product.price}}
 					</td>
 					<td>
-						£{{cart_item.sub_total}}
+						€{{cart_item.sub_total}}
 					</td>
 					{% if cart_item.quantity < cart_item.product.stock %} <td>
 						<a href="{% url 'cart:add_cart' cart_item.product.id %}" class="custom_a"><i
