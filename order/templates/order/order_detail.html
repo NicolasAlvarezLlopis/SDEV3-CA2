@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}
-Order Details - Perfect Cushion Store
+    Order Details - PC part store
 {% endblock %}
 {% block content %}
 <div>
@@ -36,17 +36,17 @@ Order Details - Perfect Cushion Store
             <tr>
                 <td>{{ item.product }}</td>
                 <td>{{ item.quantity }}</td>
-                <td>£{{ item.price }}</td>
-                <td>£{{ item.sub_total }}</td>
+                <td>€{{ item.price }}</td>
+                <td>€{{ item.sub_total }}</td>
             </tr>
             {% endfor %}
             <tr>
                 <td class="text-right" colspan="3"><b>Total</b></td>
-                <td>£{{ order.total }}</td>
+                <td>€{{ order.total }}</td>
             </tr>
             <tr>
                 <td class="text-right" colspan="3"><b>Total Paid</b></td>
-                <td>£{{ order.total }}</td>
+                <td>€{{ order.total }}</td>
             </tr>
             <tr>
                 <td class="text-left" colspan="2">
@@ -63,8 +63,7 @@ Order Details - Perfect Cushion Store
                 </td>
             </tr>
         </table>
-        <button class="btn btn-secondary" onclick="window.print();"><i class="fas fa-
-              print"></i>Print Order</button>
+        <button class="btn btn-secondary" onclick="window.print();"><i class="fas faprint"></i>Print Order</button>
     </div>
 </div>
 <br>
