@@ -3,11 +3,41 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.navbar-toggler
+{
+    border: none;
+}
+
 .nav-item {
     letter-spacing: .2em;
     font-size: 14px;
     text-transform: uppercase;
-    }
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.nav-link
+{
+    color: grey;
+    text-decoration: none;
+}
+
+.nav-link:hover
+{
+    color: black;
+}
+
+.navbar-brand
+{
+    transition: 0.3s;
+}
+
+.navbar-brand:hover
+{
+    transform: scale(1.2);
+}
+
+
 .dropdown-item {
     font-size: 14px;
     letter-spacing: .2em;
@@ -61,6 +91,14 @@ margin-bottom: 10px;
 font-size: 14px;
 text-transform: uppercase;
 letter-spacing: .2em;
+}
+
+.card img
+{
+    object-fit:contain;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
 }
 
 /****Product Page****/
@@ -134,6 +172,11 @@ letter-spacing: .2em;
     color: #fff !important;
     background-image: none !important;
     background: none !important;
+}
+
+li
+{
+    list-style-type: none;
 }
 
 errorlist li {

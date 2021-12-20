@@ -36,15 +36,12 @@
 		<img class="my_image_padding" src="{% static 'images/banner.jpg' %}" width="100%" height="300" alt="Our Products Collection">
 	</div>
 	<br>
-	<div>
-		<!--ENTER STUFF HERE-->
-	</div>
     {% endif %}
     <div class="container">
 		<div class="row mx-auto">
 			{% for product in products %}
-				<div class="my_bottom_margin col-9 col-lg-4 col-sm-12 col-md-4">
-					<div class="card text-center" style="min-width: 18rem;">
+				<div class="my_bottom_margin col-lg-4 col-sm-12 col-md-6">
+					<div class="card text-center">
 						<a class ="img" href="{{product.get_absolute_url}}"><img src="{{product.image.url}}" alt="{{product.name}}"></a>
 						<div class="card-body">
 							<h4>{{product.name}}</h4>

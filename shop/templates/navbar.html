@@ -1,12 +1,15 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bstarget="#navbarSupportedContent" aria-controls="navbarSupportedContent" ariaexpanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#"><img src="/static/images/logo2.png" width="75" height="75" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bstarget="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" ariaexpanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         shop
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -18,13 +21,15 @@
                 </li>
                 {% if item_count > 0 %}
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'cart:cart_detail' %}"><i class="fas fa-shopping-cart"></i> Your Cart</a>
+                    <a class="nav-link" href="{% url 'cart:cart_detail' %}"><i class="fas fa-shopping-cart"></i> Your
+                        Cart</a>
                 </li>
                 {% endif %}
                 {% if user.is_authenticated %}
                 <li class="nav-item dropdown">
-                    <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                    {{ user.username }}
+                    <a class=" nav-link dropdown-toggle" href="#" id="navbarDropdown" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        {{ user.username }}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="{% url 'order:order_history' %}">Order history</a></li>
