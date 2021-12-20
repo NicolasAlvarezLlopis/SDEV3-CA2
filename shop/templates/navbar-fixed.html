@@ -28,9 +28,9 @@
                     <a class="nav-link" href="{% url 'cart:cart_detail' %}">Your Cart</a>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+            <form class="d-flex" action="{% url 'search_app:searchResult' %}" method="get">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
             </form>
             {% if user.is_authenticated %}
             <li class="nav-item dropdown">
