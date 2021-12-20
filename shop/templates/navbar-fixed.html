@@ -30,7 +30,7 @@
             </ul>
             <form class="d-flex" action="{% url 'search_app:searchResult' %}" method="get">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
             </form>
             {% if user.is_authenticated %}
             <li class="nav-item dropdown">
@@ -47,10 +47,10 @@
             </li>
             {% else %}
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+                <a class="nav-link" href="{% url 'signin' %}">Log In</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'signin' %}">Sign In</a>
+                <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
             </li>
             {% endif %}
             <li class="nav-item">

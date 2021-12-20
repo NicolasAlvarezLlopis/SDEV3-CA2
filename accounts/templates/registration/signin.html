@@ -5,12 +5,12 @@
 Sign in and enjoy the variety of stunning and comfy cushions.
 {% endblock %}
 {% block title %}
-Login - PC part store
+Log In - PC part store
 {% endblock %}
 {% block content %}
 <div class="container">
     <br>
-    <h1 class="my_title text-center">Login or Create a New Account</h1>
+    <h1 class="my_title text-center">Log In or Create a New Account</h1>
     <br>
     <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center my_custom_div">
@@ -26,7 +26,7 @@ Login - PC part store
                 <form method="post">
                     {% csrf_token %}
                     <p>{{ form | crispy }}</p>
-                    <button type="submit" class="btn btnsecondary">Login</button>
+                    <button type="submit" class="btn btn-secondary">Log In</button>
                 </form>
                 <br>
             </div>
