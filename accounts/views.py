@@ -36,7 +36,7 @@ def signinView(request):
         form = AuthenticationForm()
     return render(request, 'registration/signin.html', {'form':form})
 
-
 def signoutView(request):
     logout(request)
     return redirect('signin')
+
