@@ -12,11 +12,11 @@
         <p><a href="{% url 'shop:allProdCat' %}">Home</a> | <a href="{{
 product.category.get_url }}">{{product.category}}</a> | {{product.name}}</p>
     </div>
-    <div class="container">
+    <div class="container d-flex justify-content-center">
         <br>
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6 text-center">
+        <div>
             <div>
-                <div>
+                <div class="d-flex justify-content-center">
                     <img src="{{product.image.url}}" alt="{{product.name}}">
                 </div>
             </div class = "col-12 col-sm-12 col-md-12 col-lg-6">

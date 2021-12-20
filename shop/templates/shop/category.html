@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/static/css/custom.css">
+
 {% extends "base.html" %}
 {% load static %}
 {% block metadescription %}
@@ -23,7 +25,7 @@
 			</div>
         </div>
     {% endif %}
-	<div class= mx-auto>
+	<div class= "mx-auto d-flex justify-content-center">
 		{% if category %}
 			<img class="my_image" src="{{category.image.url}}" alt="{{category.name}}">
 		</div>
@@ -33,7 +35,7 @@
 			<p class="text-justify">{{category.description}}</p>
 		</div>
     {% else %}
-		<img class="my_image_padding" src="{% static 'images/banner.jpg' %}" width="100%" height="300" alt="Our Products Collection">
+		<img class="my_image my_image_padding" src="{% static 'images/banner2.jpg' %}" alt="Our Products Collection">
 	</div>
 	<br>
     {% endif %}
@@ -45,6 +47,7 @@
 						<a class ="img" href="{{product.get_absolute_url}}"><img src="{{product.image.url}}" alt="{{product.name}}"></a>
 						<div class="card-body">
 							<h4>{{product.name}}</h4>
+							<hr size="1px">
 							<p>€{{product.price}}</p>
 						</div>
 					</div>

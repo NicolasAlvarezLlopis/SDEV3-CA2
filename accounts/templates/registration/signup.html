@@ -6,7 +6,7 @@ Sign up to get a new account with us. The perfect cushion store has a variety of
 cushions.
 {% endblock %}
 {% block title %}
-Create a New Account - PC part store
+Sign Up - PC part store
 {% endblock %}
 {% block content %}
 <div>
@@ -21,8 +21,7 @@ Create a New Account - PC part store
             <form method="post">
                 <p>{{ form | crispy }}</p>
                 {% csrf_token %}
-                <button type="submit" class="btn btn-secondary">Register
-                    Account</button>
+                <button type="submit" class="btn btn-secondary">Sign Up</button>
             </form>
             <br>
         </div>
