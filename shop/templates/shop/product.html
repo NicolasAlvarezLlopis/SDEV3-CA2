@@ -9,29 +9,32 @@
 {% block content %}
 <div class="row my_prod_row_class">
     <div class="mx-auto">
-        <p><a href="{% url 'shop:allProdCat' %}">Home</a> | <a href="{{
-product.category.get_url }}">{{product.category}}</a> | {{product.name}}</p>
+        <p><a href="{% url 'shop:allProdCat' %}">Home</a> | <a href="{{ product.category.get_url }}">{{product.category}}</a> | {{product.name}}</p>
     </div>
-    <div class="container d-flex justify-content-center">
-        <br>
-        <div>
-            <div>
-                <div class="d-flex justify-content-center">
-                    <img src="{{product.image.url}}" alt="{{product.name}}">
-                </div>
-            </div class = "col-12 col-sm-12 col-md-12 col-lg-6">
-            <div>
-                <div>
-                    <h1 class="my_prod_title">{{product.name}}</h1>
-                    <p>€{{product.price}}</p>
-                    <p class="my_title">Product Description</p>
-                    <p class="text-justify my_prod_text">{{product.description}}</p>
-                    {% if product.stock == 0%}
-                        <p class="text-justify my_prod_text"><b>Out of Stock</b></p>
-                    {% else %}
-                        <a class = "btn btn-secondary" href="{% url 'cart:add_cart' product.id %}">Add to Cart</a>
-                    {% endif %}
-                </div>
+    <div class="card-group">
+        <div class="card text-center">
+          <img src="{{product.image.url}}" class="card-img-top" alt="{{product.name}}">
+          <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <p class="card-text"><h5>€{{product.price}}</h5></p>
+            <p class="card-text">{{product.description}}</p>
+            {% if product.stock == 0%}
+            <p class="text-justify my_prod_text"><b>Out of Stock</b></p>
+            {% else %}
+          </div>
+          <div class="card-footer">
+            <a href="{% url 'cart:add_cart' product.id %}" class="btn btn-primary">add to cart</a>
+            {% endif %}
+          </div>
+        </div>
+        <div class="card text-center">
+            <div class="card-header bg-transparent border-success">needs to be changed</div>
+            <div class="card-body text-success">
+              <h5 class="card-title">needs to be changed</h5>
+              <p class="card-text">proper item description here</p>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'cart:add_cart' product.id %}" class="btn">{{product.name}}</a>
             </div>
         </div>
     </div>

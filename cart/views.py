@@ -163,3 +163,9 @@ def full_remove(request, product_id):
     cart_item = CartItem.objects.get(product=product, cart=cart)
     cart_item.delete()
     return redirect('cart:cart_detail')
+
+def full_remove1(request): # Update urls.py so product_id is not needed.
+    cart = Cart.objects.get(cart_id=_cart_id(request))
+    cart_items = CartItem.objects.filter(cart=cart) # Filter all items in cart
+    cart_items.delete()
+    return redirect('cart:cart_detail')
