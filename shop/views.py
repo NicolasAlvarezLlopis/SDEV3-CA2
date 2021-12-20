@@ -3,6 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
 from django.views.generic import ListView, DetailView
 from django.core.paginator import Page, Paginator, EmptyPage, InvalidPage
+from django.views.generic import TemplateView
 
 class ProdDetail(DetailView):
     model = Product
@@ -39,3 +40,6 @@ class ProdCat(ListView):
             products = paginator.page(paginator.num_pages)
         
         return render(request, "shop/category.html",{'category':category, 'products':products})
+
+def about(request):
+    return render(request, 'about.html')
