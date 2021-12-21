@@ -1,0 +1,1 @@
+web: gunicorn SDEV3-CA2.wsgi --log-file -
