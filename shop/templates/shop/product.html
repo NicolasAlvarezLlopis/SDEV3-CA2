@@ -28,10 +28,9 @@
           </div>
         </div>
         <div class="card text-center">
-            <div class="card-header bg-transparent border-success">needs to be changed</div>
+            <div class="card-header bg-transparent border-success">Description</div>
             <div class="card-body text-success">
-              <h5 class="card-title">needs to be changed</h5>
-              <p class="card-text">proper item description here</p>
+              <p class="card-text">{{product.description_two}}</p>
             </div>
             <div class="card-footer">
                 <a href="{% url 'cart:add_cart' product.id %}" class="btn">{{product.name}}</a>
