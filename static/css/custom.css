@@ -37,12 +37,12 @@ body {
     transform: scale(1.2);
 }
 
-.card
+.my_card
 {
     transition: 0.3s;
 }
 
-.card:hover
+.my_card:hover
 {
     transform: scale(1.05);
 }
